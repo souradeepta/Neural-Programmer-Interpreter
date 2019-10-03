@@ -1,0 +1,2 @@
+model_checkpoint_path: "card_pattern_matching_model.ckpt"
+all_model_checkpoint_paths: "card_pattern_matching_model.ckpt"
