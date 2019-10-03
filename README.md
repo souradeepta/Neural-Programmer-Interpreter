@@ -1,7 +1,5 @@
 # Program Induction using Neural Programmer-Interpreter
 
-CIS 700: Neural Program Learning - Final Semester Project (Novel Application)
-
 This project is based on the [Neural Programmer-Interpreter](https://arxiv.org/abs/1511.06279) paper, by Reed and de Freitas.
 
 ## Introduction ##
@@ -9,9 +7,9 @@ This project is based on the [Neural Programmer-Interpreter](https://arxiv.org/a
 The Neural Programmer-Interpreter is made up of below components:
 
 + **State Encoder**: This network generates an encoding of the inputs created by merging the environment and previous subroutine arguments. It generates a fixed-length state encoding. (**f_enc**)
-    
+  
 - This encoder is task-specific and must be designed based on task environment
-    
+  
 + **Core**: A 2 layer LSTM network trained to encode temporal information of which subroutine will be called in the next timestemp and with what arguments. (**f_lstm**)
     - Inputs are the encoded state and the required program embedding (**m_prog**)
     - This component is common for all tasks.
@@ -21,9 +19,9 @@ The Neural Programmer-Interpreter is made up of below components:
     - Based on paper applies a threshold of 0.5 to decide on program termination
 
 + **Next Program Predictor**: Evaluates the program key embedding which is used to compile the next program to be executed (**f_prog**)
-    
+  
 - The probabilities for the next program are generated using a softmax function.
-    
+  
 + **Arguments Predictor**: Evaluates the program arguments based on the hidden state from the LSTM layer (**f_arg**)
     - This is a Feed-Forward network
 

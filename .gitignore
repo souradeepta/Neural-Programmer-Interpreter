@@ -108,3 +108,5 @@ venv.bak/
 
 # Nodejs
 node_modules/
+desktop.ini
+tasks/card_pattern_matching/data/desktop.ini
